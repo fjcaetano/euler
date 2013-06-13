@@ -5,7 +5,7 @@ from datetime import datetime
 
 def gen_primes(number):
     """
-    Genereates a list with all primes below the given number
+    Generates the nth prime number
 
     http://stackoverflow.com/a/568618
     """
