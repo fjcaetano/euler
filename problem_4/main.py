@@ -1,6 +1,6 @@
 __author__ = 'Flavio'
 
-import datetime
+from datetime import datetime
 
 
 def largest_palindrome(*nums):
@@ -30,10 +30,10 @@ def largest_palindrome(*nums):
 
 
 if __name__ == '__main__':
-    t0 = datetime.datetime.now()
+    t0 = datetime.now()
 
     pal = largest_palindrome(999, 999)
 
-    t1 = datetime.datetime.now() - t0
+    t1 = datetime.now() - t0
 
     print 'result: %d (%ss)' % (pal, t1)

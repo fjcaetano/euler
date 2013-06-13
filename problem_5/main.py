@@ -2,11 +2,12 @@ __author__ = 'Flavio'
 
 import sys
 import os
-import datetime
 # Add the ptdraft folder path to the sys.path list
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..'))
 
 from problem_3.main import gen_primes
+
+from datetime import datetime
 
 
 def factors(number):
@@ -55,10 +56,10 @@ def smallest_divisible_all(number):
 
 
 if __name__ == '__main__':
-    t0 = datetime.datetime.now()
+    t0 = datetime.now()
 
     result = smallest_divisible_all(20)
 
-    t1 = datetime.datetime.now() - t0
+    t1 = datetime.now() - t0
 
     print 'result: %d (%ss)' % (result, t1,)

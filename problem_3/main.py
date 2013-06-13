@@ -1,6 +1,6 @@
 __author__ = 'Flavio'
 
-import datetime
+from datetime import datetime
 
 
 def gen_primes(number):
@@ -38,10 +38,10 @@ def largest_prime_factor(number):
 
 
 if __name__ == '__main__':
-    t0 = datetime.datetime.now()
+    t0 = datetime.now()
 
     result = largest_prime_factor(600851475143)
 
-    t1 = datetime.datetime.now() - t0
+    t1 = datetime.now() - t0
 
     print 'result: %d (%ss)' % (result, t1,)

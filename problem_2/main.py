@@ -1,5 +1,7 @@
 __author__ = 'Flavio'
 
+from datetime import datetime
+
 
 def sum_even_fibo(limit):
     '''
@@ -21,4 +23,10 @@ def sum_even_fibo(limit):
     return result
 
 if __name__ == '__main__':
-    print sum_even_fibo(4*10**6)
+    t0 = datetime.now()
+
+    result = sum_even_fibo(4*10**6)
+
+    t1 = datetime.now() - t0
+
+    print 'result: %d (%ss)' % (result, t1)

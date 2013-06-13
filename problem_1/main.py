@@ -1,5 +1,7 @@
 __author__ = 'Flavio'
 
+from datetime import datetime
+
 
 def sum_multiples_of_3_and_5(param):
     '''
@@ -10,10 +12,7 @@ def sum_multiples_of_3_and_5(param):
     result = 0
     while i < param:
 
-        if i % 3 == 0:
-            result += i
-
-        elif i % 5 == 0:
+        if i % 3 == 0 or i % 5 == 0:
             result += i
 
         i += 1
@@ -21,4 +20,10 @@ def sum_multiples_of_3_and_5(param):
     return result
 
 if __name__ == '__main__':
-    print sum_multiples_of_3_and_5(1000)
+    t0 = datetime.now()
+
+    result = sum_multiples_of_3_and_5(1000)
+
+    t1 = datetime.now() - t0
+
+    print 'result: %d (%ss)' % (result, t1)
