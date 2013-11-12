@@ -5,12 +5,6 @@ from datetime import datetime
 from problem_12.solution import divisor_generator
 
 
-def divisors(x):
-    for i in xrange(1, int(x/2)+1):
-        if x % i == 0:
-            yield i
-
-
 def d(x):
     divisor_set = set(divisor_generator(x)) - set([x])
     return sum(divisor_set)

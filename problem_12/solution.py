@@ -10,10 +10,10 @@ def nth_triangle(n):
 def divisor_generator(n):
     sqrt = lambda x: int(x**0.5)
 
-    for i in xrange(1,sqrt(n)+1):
-        if n%i == 0:
-            yield i;
-            yield n/i;
+    for i in xrange(1, sqrt(n)+1):
+        if n % i == 0:
+            yield i
+            yield n/i
 
 
 if __name__ == '__main__':
