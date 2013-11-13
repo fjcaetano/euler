@@ -10,15 +10,22 @@ from problem_3.main import gen_primes
 from datetime import datetime
 
 
+PRIMES_MAP = dict()
+
+
 def factors(number):
     '''
     Returns a list with the number's factors
     '''
 
-    prime_list = list(gen_primes(number+1))
+    prime_list = PRIMES_MAP.get(number+1)
+    if not prime_list:
+        prime_list = list(gen_primes(number+1))
+        PRIMES_MAP[number+1] = prime_list
+
     result = list()
 
-    while number > 1:
+    while number > 1 and prime_list:
         for prime in sorted(prime_list):
             if number % prime == 0:
                 result.append(prime)
